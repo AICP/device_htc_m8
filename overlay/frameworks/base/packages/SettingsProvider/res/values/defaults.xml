@@ -15,8 +15,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
--->
+
 <resources>
-    <!-- Fade the screen off by default -->
+    Fade the screen off by default 
     <integer name="def_screen_animation_style">1</integer>
-</resources>
+</resources>-->
