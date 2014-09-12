@@ -20,9 +20,9 @@
     "branch":      "cm-11.0"
   },
   {
-    "repository": "TheMuppets/proprietary_vendor_htc",
+    "repository": "AICP/proprietary_vendor_htc",
     "target_path": "vendor/htc",
-    "branch":      "cm-11.0"
+    "branch":      "kitkat"
   },
   {
     "repository": "CyanogenMod/android_hardware_qcom_fm",
