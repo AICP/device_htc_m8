@@ -214,8 +214,8 @@ PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
 # Variant linking script
-PRODUCT_PACKAGES += \
-    makelinks.sh
+PRODUCT_COPY_FILES += \
+    device/htc/m8/releasetools/variant_script.sh:install/bin/variant_script.sh
 
 # Wifi firmware
 PRODUCT_PACKAGES += \
