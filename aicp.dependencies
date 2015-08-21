@@ -5,6 +5,11 @@
     "branch":      "cm-12.1"
   },
   {
+    "repository": "CyanogenMod/android_device_htc_m8-common",
+    "target_path": "device/htc/m8-common",
+    "branch":      "cm-12.1"
+  },
+  {
     "repository": "AICP/proprietary_vendor_htc",
     "target_path": "vendor/htc",
     "branch":      "lp5.1"
