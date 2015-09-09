@@ -1,3 +1,6 @@
 # RIL
 rild.libargs=-d /dev/smd0
 ro.ril.hsdpa.category=14
+
+#AICP Device Maintainers
+ro.aicp.maintainer=semdoc (doc HD), LorD CloCKaN
