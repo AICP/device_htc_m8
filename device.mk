@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+# Inherit m8 specific parts
+$(call inherit-product, device/htc/m8/BoardConfig.mk)
+
 # Local overlays
 DEVICE_PACKAGE_OVERLAYS += device/htc/m8/overlay
 
