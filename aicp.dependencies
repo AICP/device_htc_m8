@@ -15,9 +15,9 @@
     "branch":      "cm-14.1"
   },
   {
-    "repository":  "mihranz7/android_kernel_htc_msm8974",
+    "repository":  "LineageOS/android_kernel_htc_msm8974",
     "target_path": "kernel/htc/msm8974",
-    "branch":      "N"
+    "branch":      "cm-14.1"
   },
   {
     "repository":  "AICP/proprietary_vendor_htc",
