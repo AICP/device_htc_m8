@@ -1,6 +1,7 @@
 #
 # Copyright (C) 2015-2016 The CyanogenMod Project
 #               2017-2018 The LineageOS Project
+#               2019 AICP
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,12 +19,16 @@
 # Inherit from m8 device
 $(call inherit-product, device/htc/m8/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common AICP stuff.
+$(call inherit-product, vendor/aicp/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_m8
+PRODUCT_NAME := aicp_m8
 PRODUCT_DEVICE := m8
 PRODUCT_BRAND := htc
 PRODUCT_MODEL := m8
 PRODUCT_MANUFACTURER := HTC
+
+# AICP Device Maintainers
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    DEVICE_MAINTAINERS="Julian Veit (Claymore1297), Davor B (LordclockaN)"
