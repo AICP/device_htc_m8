@@ -31,10 +31,14 @@
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
 
-#include "vendor_init.h"
+#include <android-base/properties.h>
+#include <android-base/logging.h>
+
 #include "property_service.h"
-#include "log.h"
-#include "util.h"
+#include "vendor_init.h"
+
+using android::base::GetProperty;
+using android::init::property_set;
 
 void property_override(char const prop[], char const value[])
 {
@@ -45,6 +49,12 @@ void property_override(char const prop[], char const value[])
         __system_property_update(pi, value, strlen(value));
     else
         __system_property_add(prop, strlen(prop), value, strlen(value));
+}
+
+void property_override_dual(char const system_prop[], char const vendor_prop[], char const value[])
+{
+    property_override(system_prop, value);
+    property_override(vendor_prop, value);
 }
 
 void common_properties()
@@ -78,20 +88,19 @@ void vendor_load_properties()
     std::string bootmid;
     std::string device;
 
-    platform = property_get("ro.board.platform");
+    platform = GetProperty("ro.board.platform", "");
     if (platform != ANDROID_TARGET)
         return;
 
-    bootmid = property_get("ro.boot.mid");
-
+    bootmid = GetProperty("ro.boot.mid", "");
     if (bootmid == "0P6B20000") {
         /* m8vzw (m8wl) */
         common_properties();
         cdma_properties("0", "10");
-        property_override("ro.product.model", "m8wl");
-        property_override("ro.build.fingerprint", "htc/HTCOneM8vzw/htc_m8wl:6.0/MRA58K/708002.3:user/release-keys");
+        property_override_dual("ro.product.model", "ro.vendor.product.model", "m8wl");
+        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "htc/HTCOneM8vzw/htc_m8wl:6.0/MRA58K/708002.3:user/release-keys");
         property_override("ro.build.description", "6.21.605.3 CL708002 release-keys");
-        property_override("ro.product.device", "htc_m8wl");
+        property_override_dual("ro.product.device", "ro.vendor.product.device", "htc_m8wl");
         property_override("ro.build.product", "htc_m8wl");
         property_override("ro.com.google.clientidbase", "android-verizon");
         property_set("ro.ril.vzw.feature", "1");
@@ -121,10 +130,10 @@ void vendor_load_properties()
         /* m8spr (m8whl) */
         common_properties();
         cdma_properties("1", "8");
-        property_override("ro.product.model", "m8whl");
-        property_override("ro.build.fingerprint", "htc/sprint_wwe/htc_m8whl:6.0/MRA58K/682910.3:user/release-keys");
+        property_override_dual("ro.product.model", "ro.vendor.product.model", "m8whl");
+        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "htc/sprint_wwe/htc_m8whl:6.0/MRA58K/682910.3:user/release-keys");
         property_override("ro.build.description", "6.20.651.3 CL682910 release-keys");
-        property_override("ro.product.device", "htc_m8whl");
+        property_override_dual("ro.product.device", "ro.vendor.product.device", "htc_m8whl");
         property_override("ro.build.product", "htc_m8whl");
         property_set("ro.ril.disable.fd.plmn.prefix", "23402,23410,23411,23420,23594,27202,27205");
         property_set("ro.ril.oem.ecclist", "911");
@@ -135,18 +144,17 @@ void vendor_load_properties()
         property_set("ro.cdma.home.operator.alpha", "Sprint");
         property_set("gsm.sim.operator.alpha", "Sprint");
         property_set("gsm.operator.alpha", "310120");
-        property_set("ro.telephony.ril_class", "M8SprRIL");
     } else {
         /* m8 */
         common_properties();
         gsm_properties("9");
-        property_override("ro.product.model", "m8");
-        property_override("ro.build.fingerprint", "htc/m8_google/htc_m8:6.0/MRA58K.H6/648564:user/release-keys");
+        property_override_dual("ro.product.model", "ro.vendor.product.model", "m8");
+        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "htc/m8_google/htc_m8:6.0/MRA58K.H6/648564:user/release-keys");
         property_override("ro.build.description", "5.07.1700.6 CL648564 release-keys");
-        property_override("ro.product.device", "htc_m8");
+        property_override_dual("ro.product.device", "ro.vendor.product.device", "htc_m8");
         property_override("ro.build.product", "htc_m8");
     }
 
-    device = property_get("ro.product.device");
-    ERROR("Found bootmid %s setting build properties for %s device\n", bootmid.c_str(), device.c_str());
+    device = GetProperty("ro.product.device", "");
+    LOG(ERROR) << "Found bootmid '" << bootmid.c_str() << "' setting build properties for '" << device.c_str() << "' device\n";
 }

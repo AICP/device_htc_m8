@@ -1,42 +1,7 @@
 [
   {
-    "repository":  "LineageOS/android_device_htc_m8-common",
-    "target_path": "device/htc/m8-common",
-    "branch":      "cm-14.1"
-  },
-  {
-    "repository":  "LineageOS/android_device_htc_msm8974-common",
-    "target_path": "device/htc/msm8974-common",
-    "branch":      "cm-14.1"
-  },
-  {
-    "repository":  "LineageOS/android_device_qcom_common",
-    "target_path": "device/qcom/common",
-    "branch":      "cm-14.1"
-  },
-  {
-    "repository":  "LineageOS/android_kernel_htc_msm8974",
-    "target_path": "kernel/htc/msm8974",
-    "branch":      "cm-14.1"
-  },
-  {
-    "repository":  "AICP/proprietary_vendor_htc",
-    "target_path": "vendor/htc",
-    "branch":      "n7.1"
-  },
-  {
-    "repository":  "LineageOS/android_hardware_sony_thermanager",
-    "target_path": "hardware/sony/thermanager",
-    "branch":      "cm-14.1"
-  },
-  {
-    "repository":  "LineageOS/android_packages_resources_devicesettings",
-    "target_path": "packages/resources/devicesettings",
-    "branch":      "cm-14.1"
-  },
-  {
-    "repository":  "LineageOS/android_packages_apps_FlipFlap",
-    "target_path": "packages/apps/FlipFlap",
-    "branch":      "cm-14.1"
+    "repository": "Claymore1297/device_htc_m8-common",
+    "target_path": "device/htc/m8-common"
+    "branch": "p9.0"
   }
 ]
