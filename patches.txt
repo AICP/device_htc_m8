@@ -1,0 +1,2 @@
+# video rec fix
+68945/7 http://gerrit.aicp-rom.com frameworks/av
