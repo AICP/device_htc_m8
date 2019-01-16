@@ -1,6 +1,6 @@
 [
   {
-    "repository": "Claymore1297/device_htc_m8-common",
+    "repository": "AICP/device_htc_m8-common",
     "target_path": "device/htc/m8-common"
     "branch": "p9.0"
   }
