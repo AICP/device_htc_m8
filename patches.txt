@@ -4,3 +4,5 @@
 3043/1 https://review.gzospgzr.com system/bt
 # OTA fix
 85671/1 http://gerrit.aicp-rom.com packages/apps/AICP_OTA
+# rotation fix
+85929/1 http://gerrit.aicp-rom.com frameworks/base
