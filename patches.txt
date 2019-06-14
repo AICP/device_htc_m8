@@ -1,4 +1,2 @@
 # video rec fix
 83303/1 http://gerrit.aicp-rom.com frameworks/av
-# BT fix
-3043/1 https://review.gzospgzr.com system/bt
