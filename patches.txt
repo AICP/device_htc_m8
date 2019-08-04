@@ -1,2 +1,5 @@
 # video rec fix
 83303/1 http://gerrit.aicp-rom.com frameworks/av
+# JamesDSP
+93006/1 https://gerrit.aicp-rom.com vendor/aicp
+93007/1 https://gerrit.aicp-rom.com packages/apps/JamesDSPManager
