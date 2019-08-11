@@ -1,5 +1,3 @@
 # JamesDSP
 93006/1 https://gerrit.aicp-rom.com vendor/aicp
 93007/1 https://gerrit.aicp-rom.com packages/apps/JamesDSPManager
-# needed patch for august ASB's to get compiled
-252619/2 https://review.lineageos.org vendor/qcom/opensource/audio
