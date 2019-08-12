@@ -1,3 +1,5 @@
 # JamesDSP
 93006/1 https://gerrit.aicp-rom.com vendor/aicp
 93007/1 https://gerrit.aicp-rom.com packages/apps/JamesDSPManager
+# build resize2fs_static
+225218/2 https://review.lineageos.org external/e2fsprogs
