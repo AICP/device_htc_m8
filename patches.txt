@@ -1,11 +1,2 @@
 # build resize2fs_static
 225218/2 https://review.lineageos.org external/e2fsprogs true
-# WFD
-93297/1 https://gerrit.aicp-rom.com frameworks/av
-93298/1 https://gerrit.aicp-rom.com frameworks/av
-93299/1 https://gerrit.aicp-rom.com frameworks/av
-93300/1 https://gerrit.aicp-rom.com frameworks/av
-93301/1 https://gerrit.aicp-rom.com frameworks/av
-93302/1 https://gerrit.aicp-rom.com frameworks/av
-93303/1 https://gerrit.aicp-rom.com frameworks/av
-93304/1 https://gerrit.aicp-rom.com device/qcom/sepolicy-legacy
