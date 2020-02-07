@@ -39,7 +39,7 @@
 # 0P6B70000 - Sprint
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := htc_m8,htc_m8whl,htc_m8wl,m8,m8wl,m8wlv,m8vzw,m8whl,m8spr
+TARGET_OTA_ASSERT_DEVICE := htc_m8,htc_m8ul,htc_m8whl,htc_m8wl,m8,m8wl,m8wlv,m8vzw,m8whl,m8spr
 
 # Kernel
 TARGET_KERNEL_CONFIG := m8_defconfig
