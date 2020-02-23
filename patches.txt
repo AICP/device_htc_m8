@@ -1,2 +1,0 @@
-# build resize2fs_static
-225218/2 https://review.lineageos.org external/e2fsprogs true
