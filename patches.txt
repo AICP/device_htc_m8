@@ -10,3 +10,5 @@
 96984/1 https://gerrit.aicp-rom.com frameworks/av
 # fix audio of wfd session/aic-audio
 102211/1 https://gerrit.aicp-rom.com frameworks/av
+# ril fix for verizon and sprint
+102869/1 https://gerrit.aicp-rom.com frameworks/base
