@@ -20,7 +20,7 @@ cc_library_static {
     srcs: ["init_m8.cpp"],
     include_dirs: [
         "device/htc/msm8974-common/init",
-        "system/core/base/include",
+        "system/libbase/include",
         "system/core/init"
     ],
     whole_static_libs: [
