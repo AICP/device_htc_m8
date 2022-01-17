@@ -37,7 +37,7 @@ using android::base::GetProperty;
 
 void common_properties()
 {
-    property_override("rild.libargs", "-d /dev/smd0");
+    property_override("vendor.rild.libargs", "-d /dev/smd0");
     property_override("ro.ril.hsdpa.category", "14");
     property_override("ro.ril.hsxpa", "4");
     property_override("ro.ril.disable.cpc", "1");
@@ -96,7 +96,7 @@ void vendor_load_properties()
         property_override("ro.ril.gsm.to.lte.blind.redir", "0");
         property_override("ro.config.svlte1x", "true");
         property_override("ro.telephony.get_imsi_from_sim", "true");
-        property_override("rild.libpath", "/vendor/lib/libril_vzw-qc-qmi-1.so");
+        property_override("vendor.rild.libpath", "/vendor/lib/libril_vzw-qc-qmi-1.so");
         set_ro_build_fingerprint_prop("htc/HTCOneM8vzw/htc_m8wl:6.0/MRA58K/708002.3:user/release-keys");
         set_ro_product_prop("device", "htc_m8wl");
         set_ro_product_prop("model", "m8wl");
@@ -115,7 +115,7 @@ void vendor_load_properties()
         property_override("ro.cdma.home.operator.alpha", "Sprint");
         property_override("gsm.sim.operator.alpha", "Sprint");
         property_override("gsm.operator.alpha", "310120");
-        property_override("rild.libpath", "/vendor/lib/libril_spr-qc-qmi-1.so");
+        property_override("vendor.rild.libpath", "/vendor/lib/libril_spr-qc-qmi-1.so");
         set_ro_build_fingerprint_prop("htc/sprint_wwe/htc_m8whl:6.0/MRA58K/682910.3:user/release-keys");
         set_ro_product_prop("device", "htc_m8whl");
         set_ro_product_prop("model", "m8whl");
