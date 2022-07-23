@@ -1,5 +1,6 @@
 112508/1 https://gerrit.aicp-rom.com build/make
-
+# adb
+326385/1 https://review.lineageos.org packages/modules/adb true
 # ril
 321768/1 https://review.lineageos.org hardware/ril true
 321769/1 https://review.lineageos.org hardware/ril true
